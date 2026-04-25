@@ -15,9 +15,8 @@
             </h1>
         </div>
         <div class="navigation">
-            <a href="#">Showcases</a>
-            <a href="#">Experience</a>
-            <a href="#" class="contact">CONTACT</a>
+            <a href="showcase.html">Showcases</a>
+            <a href="javascript:void(0)" class="contact" onclick="toggleContact()">Contact</a>
         </div>
     </div>
     <hr>
@@ -49,11 +48,11 @@
             <div class="about-stats">
                 <div class="stat">
                     <h5>Experience</h5>
-                    <p>3 years</p>
+                    <p>3+ years</p>
                 </div>
                 <div class="divider"></div>
                 <div class="stat">
-                    <h5>Servers Made</h5>
+                    <h5>Servers Created</h5>
                     <p>10+</p>
                 </div>
                 <div class="divider"></div>
@@ -67,8 +66,63 @@
                     <p>13,000+ USD</p>
                 </div>
             </div>
-        </div>
         
+                <div class="created-servers">
+                    <div class="created-title">
+                        <div class="title-text">
+                            <h2>Created Servers</h2> 
+                            <h2 style="color: white;">Released</h2>
+                        </div>
+                        <div class="scroll-controls">
+                            <span id="server-counter">1 / 5</span>
+                            <div class="scroll-buttons">
+                                <button onclick="scrollServers(-1)">&#10094;</button>
+                                <button onclick="scrollServers(1)">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="servers" id="serverContainer">
+                        <div class="hugeboxes">
+                            <div class="server"><h3>Hugeboxes</h3><h4>Box-server</h4></div>
+                            <p>With a peak of 100+ CCU players, this servers is one of my most succesful server. This server reached around 40,000 unique players across 3 different seasons, with season 2 being our most succesful. This server generated around 9,000$ in a span of 6 months. Hugeboxes ran mostly on custom skripts.</p></div>
+                        <div class="f2pmines">
+                            <div class="server"><h3>F2PMines</h3><h4>Box-server</h4></div>
+                            <p>This server was a passion project and did not generate alot of revenue, this because everything was free to play. With this server being free to play it generated alot of players with peaks of 70-80 ccu players and 20,000+ different players accross 4 months of it being up. Players loved this server which is why I am working on season 2. This server ran on alot of cool custom skripts with alot of custom features</p>
+                        </div>
+                        <div class="crazify">
+                            <div class="server"><h3>Crazify</h3><h4>Box-server</h4></div>
+                            <p>Crazify was my last released server which I discontinued, because I started college. This server generated ~1,500$ in 1 month with 10,000 unique players before it shut down. This server was one of my best yet with almost everything running on my own custom skripts and some custom plugins I created such as discord bot and linking a claim system and a core plugin.</p>
+                        </div>
+                        <div class="sunforge">
+                            <div class="server"><h3>Sunforge</h3><h4>Skymining</h4></div>
+                            <p>After F2PMines I created a skymining server called Sunforge which did great. I released this server while it was in development pushing me to release updates at light-speed pace. Because of this many updates, many players came with around 15,000 unique players and 2,000$ revenue in 2 months I built a very big community.</p>
+                        </div>
+                        <div class="unreleased">
+                            <div class="server"><h3>10+ Unreleased servers</h3><h4>Unreleased</h4></div>
+                            <p>Besides released servers I do also have alot of unreleased projects such as simulator servers, pvp servers and gen servers which I never had the time to release.</p>
+                        </div>
+                                               
+                    </div>
+                </div>
+                <hr>
+                <div class="bottom"><p>Created By: &copyJortoo - All Rights Reserved</p></div>
+            </div>
+        </div>
+
+        <div class="contact-overlay" id="contactOverlay" onclick="toggleContact()">
+            <div class="contact-card" onclick="event.stopPropagation()">
+                <h2>Contact</h2>
+                <p>Discord</p>
+                <div class="discord">
+                    <h3>@Jortoo</h3>
+                    <button id="discord" onclick="copy_discord()">Copy Discord ID</button>
+                </div>
+                <p>Let's work together!</p>
+                <button class="close-btn" onclick="toggleContact()">Back to portfolio</button>
+            </div>
+        </div>
+        <script src="Scripts/Scroll.js"></script>
     </div>
 </body>
 </html>

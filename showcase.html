@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jortoo | Showcases</title>
+    <link rel="stylesheet" href="Assets/index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="name">
+            <h1>
+                <span class="name-color">Jortoo's</span>
+                <span class="portfolio-color">Showcases</span>
+            </h1>
+        </div>
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="javascript:void(0)" class="contact" onclick="toggleContact()">Contact</a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="main">
+        <div class="about">
+            <div class="experience-title">
+                <h2>Project Gallery</h2>
+                <p>An overview of my custom Skripts (And plugins) and servers.</p>
+            </div>
+
+            <div class="showcase-grid"> 
+                <div class="showcase-card" onclick="openProject(this)">
+                    <div class="card-tag server-tag">Server</div>
+                    <h3>Hugeboxes</h3>
+                    <p>With a peak of 100+ CCU players, this servers is one of my most succesful server. This server reached around 40,000 unique players across 3 different seasons, with season 2 being our most succesful. This server generated around 9,000$ in a span of 6 months. Hugeboxes ran mostly on custom skripts.</p>
+                    <img src="Pics/hugeboxes.png" alt="Preview" class="showcase-img">
+                </div>
+               
+                <div class="showcase-card" onclick="openProject(this)">
+                    <div class="card-tag server-tag">Server</div>
+                    <h3>F2PMines S1</h3>
+                    <p>This server was a passion project and did not generate alot of revenue, this because everything was free to play. With this server being free to play it generated alot of players with peaks of 70-80 ccu players and 20,000+ different players accross 4 months of it being up. Players loved this server which is why I am working on season 2. This server ran on alot of cool custom skripts with alot of custom features</p>
+                    <img src="Pics/f2pmines.png" alt="Preview" class="showcase-img">
+                </div>
+
+                <div class="showcase-card" onclick="openProject(this)">
+                    <div class="card-tag server-tag">Server</div>
+                    <h3>Crazify</h3>
+                    <p>Crazify was my last released server which I discontinued, because I started college. This server generated ~1,500$ in 1 month with 10,000 unique players before it shut down. This server was one of my best yet with almost everything running on my own custom skripts and some custom plugins I created such as discord bot and linking, a claim system and a core plugin.</p>
+                    <img src="Pics/crazify.png" alt="Preview" class="showcase-img">
+                </div>
+
+                <div class="showcase-card" onclick="openProject(this)">
+                    <div class="card-tag">Plugin</div>
+                    <h3>Discord Linker</h3>
+                    <p>A plugin that bridges Minecraft with Discord having a chat bridge, link system, and log systems</p>
+                    <img src="Pics/dcplugin.png" alt="Preview" class="showcase-img">
+                </div>
+                <div class="showcase-card" onclick="openProject(this)">
+                    <div class="card-tag">Skript</div>
+                    <h3>Client Side Farming</h3>
+                    <p>A farming mechanic in one of my unreleased server where the player can farm with it being client-sided, so different for everyone.</p>
+                    <img src="Pics/farming.png" alt="Preview" class="showcase-img">
+                </div>
+                <div class="showcase-card" onclick="openProject(this)">
+                    <div class="card-tag">Skript</div>
+                    <h3>Commissions</h3>
+                    <p>A mechanic in my box server that let's a player complete random commissions by mining ores and receiving rewards for them.</p>
+                    <img src="Pics/commissions.png" alt="Preview" class="showcase-img">
+                </div>
+
+            </div> <div class="contact-overlay" id="projectOverlay" onclick="toggleProject()">
+                <div class="contact-card project-detail" onclick="event.stopPropagation()">
+                    <div id="projectContent"></div>
+                    <button class="close-btn" onclick="toggleProject()">Close Project</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <h2>More showcases coming soon, for more and more detailed showcases add me on discord!</h2>
+
+    <div class="contact-overlay" id="contactOverlay" onclick="toggleContact()">
+        <div class="contact-card" onclick="event.stopPropagation()">
+            <h2>Contact</h2>
+            <p>Discord</p>
+            <div class="discord">
+                <h3>@Jortoo</h3>
+                <button id="discord" onclick="copy_discord()">Copy Discord ID</button>
+            </div>
+            <button class="close-btn" onclick="toggleContact()">Back to showcases</button>
+        </div>
+        
+    </div>
+    <hr>
+    <div class="bottom"><p>Created By: &copyJortoo - All Rights Reserved</p></div>
+    <script src="Scripts/Scroll.js"></script>
+    <script>
+        function toggleContact() {
+            document.getElementById('contactOverlay').classList.toggle('active');
+        }
+        function copy_discord() {
+            const text = "jortoo";
+            const btn = document.getElementById("discord");
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerText = "Copied";
+                setTimeout(() => { btn.innerText = "Copy Discord ID"; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
